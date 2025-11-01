@@ -187,6 +187,14 @@ function ensureAdmin(uid) {
    EXPRESS INIT
 ============================================================ */
 const app = express();
+
+app.get("/", (req, res) => {
+  res.send("RPS64 Backend is running ✅");
+});
+
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
 app.set("trust proxy", 1);
 
 // Stripe webhooks need RAW body; everything else can be JSON
