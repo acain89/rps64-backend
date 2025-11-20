@@ -1,0 +1,29 @@
+{
+  "name": "rps64-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "firebase-admin": "^12.7.0",
+    "helmet": "^8.1.0",
+    "stripe": "^12.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
