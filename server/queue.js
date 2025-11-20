@@ -9,7 +9,7 @@ export async function addPlayerToQueue(uid, email, name) {
     email,
     name,
     stripePaid: true,
-    queuedAt: Date.now()
+    queuedAt: Date.now(),
   });
 }
 
