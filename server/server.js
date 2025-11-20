@@ -24,6 +24,8 @@ import passesRoutes from "./routes/passes.js";
 import matchesRoutes from "./routes/matches.js";
 import cashoutRoutes from "./routes/cashout.js";
 import leaderboardRoutes from "./routes/leaderboard.js";
+import { requireAuth } from "./middleware/requireAuth.js";
+
 
 const PORT = process.env.PORT || 10000;
 const FRONTEND = process.env.FRONTEND_URL || "http://localhost:5173";
@@ -81,6 +83,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/secure-test", requireAuth, (req, res) => {
+  res.json({ ok: true, uid: req.user.uid });
+});
 // ============================================================
 // HEALTH
 // ============================================================
